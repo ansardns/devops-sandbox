@@ -21,7 +21,7 @@ resource "azurerm_resource_group" "lab_rg" {
 }
 
 resource "azurerm_storage_account" "lab_storage" {
-  name                     = "Thameemstdevopslab${random_id.storage_suffix.hex}"
+  name                     = "thameemstdevopslab${random_id.storage_suffix.hex}"
   resource_group_name      = azurerm_resource_group.lab_rg.name
   location                 = azurerm_resource_group.lab_rg.location
   account_tier             = "Standard"
