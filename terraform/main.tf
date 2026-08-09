@@ -29,7 +29,7 @@ resource "azurerm_storage_account" "lab_storage" {
 }
 
 resource "azurerm_storage_container" "lab_container" {
-  name                  = "Task7-Thameem-blob-container"
+  name                  = "task7thameemblobcontainer"
   storage_account_id    = azurerm_storage_account.lab_storage.id
   container_access_type = "private"
 }
