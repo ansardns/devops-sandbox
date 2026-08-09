@@ -21,7 +21,7 @@ resource "azurerm_resource_group" "lab_rg" {
 }
 
 resource "azurerm_storage_account" "lab_storage" {
-  name                     = "thameemstdevopslab${random_id.storage_suffix.hex}"
+  name                     = "thameemlab${random_id.storage_suffix.hex}"
   resource_group_name      = azurerm_resource_group.lab_rg.name
   location                 = azurerm_resource_group.lab_rg.location
   account_tier             = "Standard"
@@ -29,7 +29,7 @@ resource "azurerm_storage_account" "lab_storage" {
 }
 
 resource "azurerm_storage_container" "lab_container" {
-  name                  = "task7thameemblobcontainer"
+  name                  = "t7thameemcontnr"
   storage_account_id    = azurerm_storage_account.lab_storage.id
   container_access_type = "private"
 }
